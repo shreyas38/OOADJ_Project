@@ -1,0 +1,114 @@
+mysql> show tables;
++-------------------+
+| Tables_in_project |
++-------------------+
+| admin             |
+| answer_script     |
+| course_reg        |
+| examination       |
+| question_paper    |
+| student           |
+| teacher           |
++-------------------+
+7 rows in set (0.00 sec)
+
+mysql> show schema admin;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'schema admin' at line 1
+mysql> DESCRIBE admin;
++---------------+-------------+------+-----+---------+-------+
+| Field         | Type        | Null | Key | Default | Extra |
++---------------+-------------+------+-----+---------+-------+
+| adminid       | varchar(25) | YES  |     | NULL    |       |
+| adminPassword | varchar(25) | YES  |     | NULL    |       |
+| firstName     | varchar(25) | YES  |     | NULL    |       |
+| lastName      | varchar(25) | YES  |     | NULL    |       |
+| phoneNumber   | varchar(11) | YES  |     | NULL    |       |
++---------------+-------------+------+-----+---------+-------+
+5 rows in set (0.02 sec)
+
+mysql> DESCRIBE answer_script;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| srn        | varchar(25) | YES  |     | NULL    |       |
+| coursecode | varchar(25) | YES  |     | NULL    |       |
+| coursename | varchar(25) | YES  |     | NULL    |       |
+| mcq_ans    | varchar(25) | YES  |     | NULL    |       |
+| short_ans  | varchar(25) | YES  |     | NULL    |       |
+| long_ans   | varchar(25) | YES  |     | NULL    |       |
+| marks      | varchar(25) | YES  |     | NULL    |       |
+| evaluate   | varchar(25) | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+mysql> DESCRIBE course_reg;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| SRN        | varchar(25) | YES  |     | NULL    |       |
+| coursecode | varchar(25) | YES  |     | NULL    |       |
+| coursename | varchar(25) | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> DESCRIBE examination;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| coursecode | varchar(25) | YES  |     | NULL    |       |
+| coursename | varchar(25) | YES  |     | NULL    |       |
+| srn        | varchar(25) | YES  |     | NULL    |       |
+| duration   | varchar(25) | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> DESCRIBE question_paper;
++----------------+-------------+------+-----+---------+-------+
+| Field          | Type        | Null | Key | Default | Extra |
++----------------+-------------+------+-----+---------+-------+
+| coursecode     | varchar(25) | YES  |     | NULL    |       |
+| coursename     | varchar(25) | YES  |     | NULL    |       |
+| marks          | varchar(25) | YES  |     | NULL    |       |
+| mcq_question   | varchar(25) | YES  |     | NULL    |       |
+| short_question | varchar(25) | YES  |     | NULL    |       |
+| long_question  | varchar(25) | YES  |     | NULL    |       |
+| department     | varchar(25) | YES  |     | NULL    |       |
++----------------+-------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> DESCRIBE student;
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| SRN             | varchar(25) | YES  |     | NULL    |       |
+| studentPassword | varchar(25) | YES  |     | NULL    |       |
+| firstName       | varchar(25) | YES  |     | NULL    |       |
+| LastName        | varchar(25) | YES  |     | NULL    |       |
+| phoneNumber     | varchar(25) | YES  |     | NULL    |       |
+| program         | varchar(25) | YES  |     | NULL    |       |
+| department      | varchar(25) | YES  |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+7 rows in set (0.00 sec)
+
+mysql> DESCRIBE teacher;
++-----------------+-------------+------+-----+---------+-------+
+| Field           | Type        | Null | Key | Default | Extra |
++-----------------+-------------+------+-----+---------+-------+
+| teacherid       | varchar(25) | YES  |     | NULL    |       |
+| teacherPassword | varchar(25) | YES  |     | NULL    |       |
+| firstName       | varchar(25) | YES  |     | NULL    |       |
+| lastName        | varchar(25) | YES  |     | NULL    |       |
+| phoneNumber     | varchar(11) | YES  |     | NULL    |       |
+| department      | varchar(25) | YES  |     | NULL    |       |
++-----------------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+
+
+
+
+
+
+
+
+
